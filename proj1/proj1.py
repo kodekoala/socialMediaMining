@@ -16,7 +16,7 @@ except pymongo.errors.ConnectionFailure as e:
 	sys.exit(1)
 
 cokeLabel=text2art("Coca-Cola")
-print("\n" + cokeLabel + "\n")
+print "\n" + cokeLabel + "\n"
 
 #Connect to coke database, get 25 tweet structures
 coke = db.CocaCola
@@ -50,7 +50,7 @@ print cokeTable
 
 
 pepsiLabel=text2art("Pepsi")
-print("\n" + pepsiLabel + "\n")
+print "\n" + pepsiLabel + "\n"
 
 #Connect to pepsi database, get 25 tweet structures
 pepsi = db.pepsi

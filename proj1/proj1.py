@@ -1,4 +1,4 @@
-#Author: Yousuf Asfari
+#Authors: CMSC 491 Group 1
 
 import json
 import pymongo
@@ -37,7 +37,6 @@ for text in cokeMessages:
 
 	#Get sentiment analysis for the current tweet, as well as the lexical diversity
 	vs = vaderSentiment(text)
-	# print text + "\nLexical Diversity: " + str(1.0*len(set(cokeWords))/len(cokeWords)) + "\nSentiment Analysis: " + str(vs['compound']) + "\n"
 
 	#Add a newline for better readability, and display all 25 tweets with their lex diversity and sentiment analysis in a pretty table 
 	text = text + '\n'
@@ -71,7 +70,6 @@ for text in pepsiMessages:
 
 	#Get sentiment analysis for the current tweet, as well as the lexical diversity
 	vs = vaderSentiment(text)
-	# print text + "\nLexical Diversity: " + str(1.0*len(set(pepsiWords))/len(pepsiWords)) + "\nSentiment Analysis: " + str(vs['compound']) + "\n"
 
 	#Add a newline for better readability, and display all 25 tweets with their lex diversity and sentiment analysis in a pretty table 
 	text = text + '\n'

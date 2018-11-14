@@ -5,6 +5,7 @@ import requests
 import json
 import codecs
 import nltk
+import string
 
 #Add Unicode filter
 def removeUnicode(text):
@@ -64,4 +65,11 @@ bigrams = search.nbest(idxJaccard, N)
 #Now lets print the results
 print "Bigrams found:" + "\n"
 for bigram in bigrams:
-	print str(bigram[0]).encode('utf-8'), " ", str(bigram[1]).encode('utf-8')
+	#Filter out punctuation and unnecessary bigrams that present no value to us
+	bigram1 = (str(bigram[0]).encode('utf-8') + " ").translate(None, string.punctuation)
+	bigram2 = str(bigram[1]).encode('utf-8').translate(None, string.punctuation)
+
+	if (bigram1 != " " and bigram2 != " "):
+		print (bigram1 + bigram2)
+
+
